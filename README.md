@@ -20,6 +20,9 @@ You may also see any lint errors in the console.
 
 
 ##Paleta de cores
+
+![image](https://user-images.githubusercontent.com/17839848/179429844-a79c9b93-9359-42ff-ae86-7d21c23a06bd.png)
+
 .color1 {color: #ff71f4;}
 .color2 {color: #ff8998;}
 .color3 {color: #ffd852;}
