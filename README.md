@@ -17,3 +17,11 @@ You may also see any lint errors in the console.
 ![image](https://user-images.githubusercontent.com/17839848/179429756-22bc4ad8-e4cb-4025-bc72-373ad89818a1.png)
 
 
+
+
+##Paleta de cores
+.color1 {color: #ff71f4;}
+.color2 {color: #ff8998;}
+.color3 {color: #ffd852;}
+.color4 {color: #fffb5c;}
+.color5 {color: #cbffa4;}
