@@ -3,6 +3,8 @@ import styled, { createGlobalStyle } from "styled-components";
 import avatar from "../assets/avatar.png";
 import avatar2 from "../assets/MyAvatar.png";
 import space from "../assets/space.jpg";
+import Footer from "./Footer";
+
 const GlobalStyle = createGlobalStyle`
   *{
     box-sizing: border-box;
@@ -18,16 +20,15 @@ const BackgroundStyle = styled.div`
 `;
 
 const TitleName = styled.h1`
-  text-align: center;
   font-family: Helvetica;
   font-size: 550%;
-  margin-top: 50px;
+  margin-top: 11%;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #ff71f4;
 `;
 
 const Textbody = styled.div`
-  padding-top: 2%;
+  padding-top: 5%;
   font-family: Helvetica;
   color: #cbffa4;
 `;
@@ -59,6 +60,8 @@ export default function Home() {
           <PerfilImage src={avatar2} alt="Foto de Mariele"></PerfilImage>
         </div>
       </BackgroundStyle>
+
+      <Footer />
     </>
   );
 }
