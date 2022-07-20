@@ -4,7 +4,6 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "./Card.js";
 import Fome from "./Fome";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -35,7 +34,9 @@ export default function Work() {
 
   return (
     <>
-      <Titlebody>Objetivos da ONU - Rio branco 2030</Titlebody>
+      <Titlebody>
+        Objetivos de Desenvolvimento Sustentável - Rio branco 2030
+      </Titlebody>
       <Box>
         <GlobalStyle />
         <div

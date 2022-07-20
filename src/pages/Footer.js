@@ -5,8 +5,6 @@ import space from "../assets/space.jpg";
 
 import styled, { createGlobalStyle } from "styled-components";
 const Textbody = styled.div`
-  display: flex;
-  justify-content: flex-end;
   width: 100%;
   height: 50px;
   font-family: Helvetica;
@@ -15,12 +13,17 @@ const Textbody = styled.div`
 const IconsNetwork = styled.div`
   display: flex;
   justify-content: flex-end;
+  float: right;
+  width: 5%;
+  height: 100%;
+  align-items: center;
 `;
 
 const BackgroundStyle = styled.div`
-  background-image: url(${space});
+  background-color: #cbffa4;
   height: 100%;
   width: 100%;
+  padding-right: 5%;
 `;
 
 export default function Footer() {
@@ -34,7 +37,8 @@ export default function Footer() {
               <GoOctoface />
               <h5>Github</h5>
             </a>
-
+          </IconsNetwork>
+          <IconsNetwork>
             <a href="mailto:someone@example.com" target="_blank">
               {/* <img src="smiley.gif" alt="Github link" /> */}
               <GoMail />

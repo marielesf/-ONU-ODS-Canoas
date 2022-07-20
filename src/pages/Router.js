@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Work from "./Work";
-import Fotos from "./Fotos";
+import Jobs from "./Job";
 import Home from "./Home";
 import Fome from "./Fome";
 
@@ -29,21 +29,21 @@ function RouterApp() {
     <>
       <Router>
         <NavbarLink to="/">
-          <strong>Home /</strong>
+          <strong>Home/</strong>
         </NavbarLink>
         <NavbarLink to="/Work">
-          <strong>ONU Canoas /</strong>
+          <strong>ONU Canoas/</strong>
         </NavbarLink>
-        <NavbarLink to="/Fotos">
-          <strong>Trabalhos Recentes /</strong>
+        <NavbarLink to="/Jobs">
+          <strong>Trabalhos Recentes/</strong>
         </NavbarLink>
         <NavbarLink to="/Fome">
-          <strong>Fome /</strong>
+          <strong>Fome/</strong>
         </NavbarLink>
 
         <Routes>
           <Route path="/Work" element={<Work />} />
-          <Route path="/Fotos" element={<Fotos />} />
+          <Route path="/Jobs" element={<Jobs />} />
           <Route path="/" element={<Home />} />
           <Route path="/Fome" element={<Fome />} />
         </Routes>
