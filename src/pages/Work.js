@@ -1,17 +1,8 @@
 import React, { useState } from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "./Card.js";
-import Fome from "./Fome";
-
-const GlobalStyle = createGlobalStyle`
-  *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-  }
-`;
 
 const Box = styled.main`
   border: solid yellow;
@@ -38,7 +29,6 @@ export default function Work() {
         Objetivos de Desenvolvimento Sustentável - Rio branco 2030
       </Titlebody>
       <Box>
-        <GlobalStyle />
         <div
           onClick={() => {
             setModal((prevState) => !prevState);

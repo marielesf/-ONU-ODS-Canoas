@@ -1,22 +1,16 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled, { createGlobalStyle } from "styled-components";
 import avatar from "../assets/avatar.png";
 import avatar2 from "../assets/MyAvatar.png";
 import space from "../assets/space.jpg";
 import Footer from "./Footer";
 
-const GlobalStyle = createGlobalStyle`
-  *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  `;
-
 const BackgroundStyle = styled.div`
   background-image: url(${space});
   height: 100%;
   width: 100%;
+  margin-top: 1%;
 `;
 
 const TitleName = styled.h1`
@@ -38,15 +32,22 @@ const PerfilImage = styled.img`
   width: 20%;
 `;
 
+export const NameHome = styled.a`
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: #ff71f4;
+  }
+`;
+
 export default function Home() {
   return (
     <>
-      <GlobalStyle />
       <BackgroundStyle>
         <Textbody>
           ---------
-          <h3>Olá, Eu sou Web Developer.</h3>
-          <h3>Bem vindo ao meu portifolio.</h3>
+          <h2>Hello, I am Web Developer.</h2>
+          <h2>Welcome to my portifolio.</h2>
         </Textbody>
 
         <div
@@ -56,7 +57,9 @@ export default function Home() {
             "justify-content": "center",
           }}
         >
-          <TitleName>Mariele Fontana</TitleName>
+          <TitleName>
+            <NameHome>Mariele Fontana</NameHome>
+          </TitleName>
           <PerfilImage src={avatar2} alt="Foto de Mariele"></PerfilImage>
         </div>
       </BackgroundStyle>

@@ -1,9 +1,9 @@
 import React from "react";
-import { GoOctoface } from "react-icons/go";
-import { GoMail } from "react-icons/go";
-import space from "../assets/space.jpg";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { BiMailSend } from "react-icons/bi";
+import styled from "styled-components";
 
-import styled, { createGlobalStyle } from "styled-components";
 const Textbody = styled.div`
   width: 100%;
   height: 50px;
@@ -20,10 +20,20 @@ const IconsNetwork = styled.div`
 `;
 
 const BackgroundStyle = styled.div`
+  display: flex;
+  justify-content: justify;
   background-color: #cbffa4;
   height: 100%;
   width: 100%;
-  padding-right: 5%;
+  padding-right: 7%;
+`;
+
+const Copyrigth = styled.h4`
+  display: flex;
+  justify-content: rigth;
+  width: 85%;
+  padding-left: 5%;
+  align-items: center;
 `;
 
 export default function Footer() {
@@ -31,18 +41,21 @@ export default function Footer() {
     <>
       <Textbody>
         <BackgroundStyle>
+          <Copyrigth>copyrigth@2022</Copyrigth>
           <IconsNetwork>
             <a href="https://github.com/marielesf" target="_blank">
-              {/* <img src="smiley.gif" alt="Github link" /> */}
-              <GoOctoface />
-              <h5>Github</h5>
+              <BsGithub size={28} />
             </a>
           </IconsNetwork>
           <IconsNetwork>
             <a href="mailto:someone@example.com" target="_blank">
-              {/* <img src="smiley.gif" alt="Github link" /> */}
-              <GoMail />
-              <h5>Send email</h5>
+              <BiMailSend size={28} />
+            </a>
+          </IconsNetwork>
+
+          <IconsNetwork>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <AiOutlineLinkedin size={28} />
             </a>
           </IconsNetwork>
         </BackgroundStyle>

@@ -5,18 +5,17 @@ import Jobs from "./Job";
 import Home from "./Home";
 import Fome from "./Fome";
 
-import styled, { createGlobalStyle } from "styled-components";
-const GlobalStyle = createGlobalStyle`
-  *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  `;
+import styled from "styled-components";
+
+const BackgroundStyle = styled.div`
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
 
 export const NavbarLink = styled(Link)`
-  margin: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 8px;
   text-decoration: none;
   &:hover,
   &:focus {
@@ -27,27 +26,29 @@ export const NavbarLink = styled(Link)`
 function RouterApp() {
   return (
     <>
-      <Router>
-        <NavbarLink to="/">
-          <strong>Home/</strong>
-        </NavbarLink>
-        <NavbarLink to="/Work">
-          <strong>ONU Canoas/</strong>
-        </NavbarLink>
-        <NavbarLink to="/Jobs">
-          <strong>Trabalhos Recentes/</strong>
-        </NavbarLink>
-        <NavbarLink to="/Fome">
-          <strong>Fome/</strong>
-        </NavbarLink>
+      <BackgroundStyle>
+        <Router>
+          <NavbarLink to="/">
+            <strong>Home/</strong>
+          </NavbarLink>
+          <NavbarLink to="/Work">
+            <strong>ONU Canoas/</strong>
+          </NavbarLink>
+          <NavbarLink to="/Jobs">
+            <strong>Trabalhos Recentes/</strong>
+          </NavbarLink>
+          <NavbarLink to="/Fome">
+            <strong>Fome/</strong>
+          </NavbarLink>
 
-        <Routes>
-          <Route path="/Work" element={<Work />} />
-          <Route path="/Jobs" element={<Jobs />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/Fome" element={<Fome />} />
-        </Routes>
-      </Router>
+          <Routes>
+            <Route path="/Work" element={<Work />} />
+            <Route path="/Jobs" element={<Jobs />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/Fome" element={<Fome />} />
+          </Routes>
+        </Router>
+      </BackgroundStyle>
     </>
   );
 }

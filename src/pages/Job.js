@@ -64,6 +64,7 @@ export default function Jobs() {
                 width="800"
                 height="500"
               /> */}
+              <img src={filteredRepo.owner.avatar_url} width="200"></img>
 
               <a href={filteredRepo.html_url} target="_blank" rel="noreferrer">
                 Saiba Mais

@@ -1,7 +1,5 @@
 import React from "react";
 import RouterApp from "./pages/Router";
-
-import space from "./assets/space.jpg";
 import styled, { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   *{
@@ -13,7 +11,6 @@ const GlobalStyle = createGlobalStyle`
 const BackgroundStyle = styled.div`
   width: 100%;
   text-align: center;
-  font-family: Helvetica;
 `;
 
 function App() {
