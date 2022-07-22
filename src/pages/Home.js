@@ -10,7 +10,6 @@ const BackgroundStyle = styled.div`
   background-image: url(${space});
   height: 100%;
   width: 100%;
-  margin-top: 1%;
 `;
 
 const TitleName = styled.h1`

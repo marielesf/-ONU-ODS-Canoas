@@ -9,13 +9,22 @@ import styled from "styled-components";
 
 const BackgroundStyle = styled.div`
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+`;
+
+const Menu = styled.div`
+  vertical-align: middle;
+  height: 6vh;
+  width: 500vh;
+  display: table-cell;
 `;
 
 export const NavbarLink = styled(Link)`
-  margin: 8px;
+  margin-right: 8px;
+  height: 100%;
+  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   text-decoration: none;
   &:hover,
   &:focus {
@@ -28,19 +37,20 @@ function RouterApp() {
     <>
       <BackgroundStyle>
         <Router>
-          <NavbarLink to="/">
-            <strong>Home/</strong>
-          </NavbarLink>
-          <NavbarLink to="/Work">
-            <strong>ONU Canoas/</strong>
-          </NavbarLink>
-          <NavbarLink to="/Jobs">
-            <strong>Trabalhos Recentes/</strong>
-          </NavbarLink>
-          <NavbarLink to="/Fome">
-            <strong>Fome/</strong>
-          </NavbarLink>
-
+          <Menu>
+            <NavbarLink to="/">
+              <strong>Home/</strong>
+            </NavbarLink>
+            <NavbarLink to="/Work">
+              <strong>ONU Canoas/</strong>
+            </NavbarLink>
+            <NavbarLink to="/Jobs">
+              <strong>Trabalhos Recentes/</strong>
+            </NavbarLink>
+            <NavbarLink to="/Fome">
+              <strong>Fome/</strong>
+            </NavbarLink>
+          </Menu>
           <Routes>
             <Route path="/Work" element={<Work />} />
             <Route path="/Jobs" element={<Jobs />} />
