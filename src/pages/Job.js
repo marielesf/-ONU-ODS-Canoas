@@ -4,21 +4,13 @@ import Card from "./Card.js";
 import axios from "axios";
 import Footer from "./Footer.js";
 
-const GlobalStyle = createGlobalStyle`
-  *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-  }
-`;
-
 const Box = styled.main`
-  height: 90vh;
-  width: 100%;
+  height: 60vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  margin: 5%;
 `;
 
 const BoxImage = styled.div`
@@ -30,7 +22,6 @@ const BoxImage = styled.div`
 const Titlebody = styled.h1`
   padding-top: 2%;
   font-family: Helvetica;
-  color: #ff8998;
 `;
 
 const Data = [
@@ -82,14 +73,13 @@ export default function Jobs() {
     <>
       <Titlebody>Trabalhos Recentes</Titlebody>
       <Box>
-        <GlobalStyle />
         {repo
           .filter((iten) => iten.size > 400)
           .map((filteredRepo, index) => (
             <Card key={index}>
               <h3>{filteredRepo.name}</h3>
               <BoxImage>
-                <img src={Data[index].img} width="380px"></img>
+                <img src={Data[index].img} width="370px"></img>
               </BoxImage>
               <a href={filteredRepo.html_url} target="_blank" rel="noreferrer">
                 Saiba Mais

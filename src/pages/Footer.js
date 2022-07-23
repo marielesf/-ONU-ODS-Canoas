@@ -28,7 +28,7 @@ const BackgroundStyle = styled.div`
   padding-right: 7%;
 `;
 
-const Copyrigth = styled.h4`
+const Copyright = styled.h4`
   display: flex;
   justify-content: rigth;
   width: 85%;
@@ -41,7 +41,7 @@ export default function Footer() {
     <>
       <Textbody>
         <BackgroundStyle>
-          <Copyrigth>copyrigth@2022</Copyrigth>
+          <Copyright>copyright@2022</Copyright>
           <IconsNetwork>
             <a href="https://github.com/marielesf" target="_blank">
               <BsGithub size={28} />

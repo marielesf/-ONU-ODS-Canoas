@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Work from "./Work";
 import Jobs from "./Job";
 import Home from "./Home";
-import Fome from "./Fome";
+import Saude from "./Saude";
+import Educacao from "./Educacao";
+import Agua from "./Agua";
 
 import styled from "styled-components";
 
@@ -47,15 +49,14 @@ function RouterApp() {
             <NavbarLink to="/Jobs">
               <strong>Trabalhos Recentes/</strong>
             </NavbarLink>
-            <NavbarLink to="/Fome">
-              <strong>Fome/</strong>
-            </NavbarLink>
           </Menu>
           <Routes>
             <Route path="/Work" element={<Work />} />
             <Route path="/Jobs" element={<Jobs />} />
             <Route path="/" element={<Home />} />
-            <Route path="/Fome" element={<Fome />} />
+            <Route path="/Saude" element={<Saude />} />
+            <Route path="/Educacao" element={<Educacao />} />
+            <Route path="/Agua" element={<Agua />} />
           </Routes>
         </Router>
       </BackgroundStyle>

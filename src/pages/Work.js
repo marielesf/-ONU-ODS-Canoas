@@ -2,61 +2,55 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Card from "./Card.js";
 import Footer from "./Footer.js";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
-import { MdOutlineFoodBank } from "react-icons/md";
+import {
+  GiHealthIncrease,
+  GiWaterDrop,
+  GiFruitTree,
+  GiRollingEnergy,
+} from "react-icons/gi";
+import { MdOutlineFoodBank, MdOutlineCastForEducation } from "react-icons/md";
+import { TiWeatherShower } from "react-icons/ti";
+import { FaIndustry } from "react-icons/fa";
+import Fome from "./Fome";
 
 const Box = styled.main`
-  border: solid yellow;
-  height: 90vh;
-  width: 100%;
+  height: 60vh;
+  width: 90%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  font-color: white;
+  margin: 5%;
 `;
 
 const Titlebody = styled.h1`
   padding-top: 2%;
   font-family: Helvetica;
-  color: #ff8998;
 `;
 
-const OnuGoals = [
-  {
-    title: "1 - ACABAR COM A FOME",
-    icon: "MdOutlineFoodBank",
-    color: "red",
-  },
-  {
-    id: 2,
-    img: "https://user-images.githubusercontent.com/17839848/146626471-30230e2a-a8b1-4ac2-bde5-39f0d1cc031c.png",
-  },
-  {
-    id: 3,
-    img: "https://user-images.githubusercontent.com/17839848/180328802-5319fc8a-cf89-4ed7-b4f9-d88f96e98aa5.png",
-  },
-  {
-    id: 4,
-    img: "https://user-images.githubusercontent.com/17839848/156270456-5c5c9196-ea6c-41e7-bebd-e5ecb31729d1.png",
-  },
-  {
-    id: 5,
-    img: "https://user-images.githubusercontent.com/17839848/156077567-007f0fee-d73b-4eeb-9064-8c6657427732.png",
-  },
-  {
-    id: 6,
-    img: "https://user-images.githubusercontent.com/17839848/146284212-1ada3199-7542-4e76-9c09-474e017f15f9.png",
-  },
-  {
-    id: 7,
-    img: "https://user-images.githubusercontent.com/17839848/174409466-1516dda7-9bf9-4744-af65-4514aecf0b6e.png",
-  },
-  {
-    id: 8,
-    img: "https://user-images.githubusercontent.com/17839848/161453629-a9ca0314-6292-4f65-a9e3-ffdd0b3ac826.png",
-  },
-];
+const BodyParaghp = styled.p`
+  padding-top: 2%;
+  font-family: Helvetica;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+  text-justify: inter-word;
+`;
+
+const CardText = styled.div`
+  align-items: center;
+  display: flex;
+`;
+
+const CardIcon = styled.div`
+  margin-top: 20%;
+  cursor: pointer;
+`;
+
+export const LinkGoals = styled.a`
+  text-decoration: none;
+  color: black;
+`;
 
 export default function Work() {
   const [modal, setModal] = useState(false);
@@ -64,8 +58,23 @@ export default function Work() {
   return (
     <>
       <Titlebody>
-        Objetivos de Desenvolvimento Sustentável - Rio branco 2030
+        Os Objetivos de Desenvolvimento Sustentável na Rio branco - 2030
       </Titlebody>
+      <BodyParaghp>
+        Os Objetivos de Desenvolvimento Sustentável são um apelo global à ação
+        para acabar com a pobreza, proteger o meio ambiente e o clima e garantir
+        que as pessoas, em todos os lugares, possam desfrutar de paz e de
+        prosperidade. Estes são os objetivos para os quais as Nações Unidas
+        estão contribuindo a fim de que possamos atingir a Agenda 2030 no
+        Brasil.
+      </BodyParaghp>
+
+      {modal && (
+        <BodyParaghp>
+          <Fome></Fome>
+        </BodyParaghp>
+      )}
+
       <Box>
         <div
           style={{ backgroundColor: "#bf2a23" }}
@@ -74,10 +83,14 @@ export default function Work() {
           }}
         >
           <Card>
-            <h3> 1 - ACABAR COM A FOME</h3>
-            <MdOutlineFoodBank size={70} />
+            <CardText>
+              <h1> 1 </h1>
+              <h3> Acabar com a fome</h3>
+            </CardText>
+            <CardIcon>
+              <MdOutlineFoodBank size={70} />
+            </CardIcon>
           </Card>
-          {modal && <h1>Conteúdo</h1>}
         </div>
         <div
           style={{ backgroundColor: "#f0ce4e" }}
@@ -86,9 +99,16 @@ export default function Work() {
           }}
         >
           <Card>
-            <h3> 2 - Saúde e Bem-Estar</h3>
+            <LinkGoals href="./Saude">
+              <CardText>
+                <h1> 2 </h1>
+                <h3> Saúde e Bem-Estar</h3>
+              </CardText>
+              <CardIcon>
+                <GiHealthIncrease size={70} />
+              </CardIcon>
+            </LinkGoals>
           </Card>
-          {modal && <h1>Conteúdo</h1>}
         </div>
         <div
           style={{ backgroundColor: "#a6ad3c" }}
@@ -97,9 +117,16 @@ export default function Work() {
           }}
         >
           <Card>
-            <h3>3 - Educação </h3>
+            <LinkGoals href="./Educacao">
+              <CardText>
+                <h1> 3 </h1>
+                <h3> Educação </h3>
+              </CardText>
+              <CardIcon>
+                <MdOutlineCastForEducation size={70} />
+              </CardIcon>
+            </LinkGoals>
           </Card>
-          {modal && <h1>Conteúdo</h1>}
         </div>
         <div
           style={{ backgroundColor: "#2b9eb3" }}
@@ -108,57 +135,64 @@ export default function Work() {
           }}
         >
           <Card>
-            <h3> 4 - Água Potável e Saneamento</h3>
+            <LinkGoals href="./Agua">
+              <CardText>
+                <h1> 4 </h1>
+                <h3> Água Potável e Saneamento</h3>
+              </CardText>
+              <CardIcon>
+                <GiWaterDrop size={70} />
+              </CardIcon>
+            </LinkGoals>
           </Card>
-          {modal && <h1>Conteúdo</h1>}
         </div>
-        <div
-          style={{ backgroundColor: "#cbffa4" }}
-          onClick={() => {
-            setModal((prevState) => !prevState);
-          }}
-        >
+        <div style={{ backgroundColor: "#cbffa4" }} onClick={() => {}}>
           <Card>
-            <h3>5 - Vida Terrestre</h3>
+            <CardText>
+              <h1> 5 </h1> <h3> Vida Terrestre</h3>
+            </CardText>
+            <CardIcon>
+              <GiFruitTree size={70} />
+            </CardIcon>
           </Card>
-          {modal && <h1>Conteúdo</h1>}
         </div>
-        <div
-          style={{ backgroundColor: "#ff8998" }}
-          onClick={() => {
-            setModal((prevState) => !prevState);
-          }}
-        >
+        <div style={{ backgroundColor: "#ff8998" }} onClick={() => {}}>
           <Card>
-            <h3>6 - Ação Contra a Mudança Global do Clima</h3>
+            <CardText>
+              <h1> 6 </h1>
+              <h3> Ação Contra a Mudança Global do Clima</h3>
+            </CardText>
+            <CardIcon>
+              <TiWeatherShower size={70} />
+            </CardIcon>
           </Card>
-          {modal && <h1>Conteúdo</h1>}
         </div>
-        <div
-          style={{ backgroundColor: "#e88700" }}
-          onClick={() => {
-            setModal((prevState) => !prevState);
-          }}
-        >
+        <div style={{ backgroundColor: "#e88700" }} onClick={() => {}}>
           <Card>
-            <h3>
-              7 - Criação de Empregos na Indústria, Inovação e Infraestrutura
-            </h3>
+            <CardText>
+              <h1>7 </h1>
+              <h3>
+                Criação de Empregos na Indústria, Inovação e Infraestrutura{" "}
+              </h3>
+            </CardText>
+            <CardIcon>
+              <FaIndustry size={70} />
+            </CardIcon>
           </Card>
-          {modal && <h1>Conteúdo</h1>}
         </div>
-        <div
-          style={{ backgroundColor: "#fffb5c" }}
-          onClick={() => {
-            setModal((prevState) => !prevState);
-          }}
-        >
+        <div style={{ backgroundColor: "#fffb5c" }} onClick={() => {}}>
           <Card>
-            <h3>8 - Energia Limpa e Acessível</h3>
+            <CardText>
+              <h1>8 </h1>
+              <h3> Energia Limpa e Acessível</h3>
+            </CardText>
+            <CardIcon>
+              <GiRollingEnergy size={70} />
+            </CardIcon>
           </Card>
-          {modal && <h1>Conteúdo</h1>}
         </div>
       </Box>
+
       <Footer />
     </>
   );

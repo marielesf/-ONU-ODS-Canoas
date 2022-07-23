@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import avatar from "../assets/avatar.png";
 import avatar2 from "../assets/MyAvatar.png";
 import space from "../assets/space.jpg";
@@ -29,6 +29,8 @@ const Textbody = styled.div`
 const PerfilImage = styled.img`
   height: 40%;
   width: 20%;
+  animation-name: example;
+  animation-duration: 5s;
 `;
 
 export const NameHome = styled.a`
@@ -37,6 +39,23 @@ export const NameHome = styled.a`
   &:focus {
     color: #ff71f4;
   }
+`;
+
+const Animar = keyframes`
+0%{
+  transform: translateX(300px);
+  background-color: linear-gradient(45deg, blue, red);
+  top: 40%;
+}
+`;
+
+const Circle = styled.div`
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  border: solid;
+  animation: ${Animar} 4s ease-out;
+  position: absolute;
 `;
 
 export default function Home() {
@@ -48,7 +67,9 @@ export default function Home() {
           <h2>Hello, I am Web Developer.</h2>
           <h2>Welcome to my portifolio.</h2>
         </Textbody>
-
+        <Circle>
+          <h1>Oi galera</h1>
+        </Circle>
         <div
           style={{
             display: "flex",
