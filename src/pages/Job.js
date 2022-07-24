@@ -5,7 +5,7 @@ import axios from "axios";
 import Footer from "./Footer.js";
 
 const Box = styled.main`
-  height: 60vh;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -19,7 +19,7 @@ const BoxImage = styled.div`
   overflow: hidden;
 `;
 
-const Titlebody = styled.h1`
+const Titlebody = styled.h2`
   padding-top: 2%;
   font-family: Helvetica;
 `;

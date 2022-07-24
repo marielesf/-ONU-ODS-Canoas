@@ -12,18 +12,18 @@ import { MdOutlineFoodBank, MdOutlineCastForEducation } from "react-icons/md";
 import { TiWeatherShower } from "react-icons/ti";
 import { FaIndustry } from "react-icons/fa";
 import Fome from "./Fome";
+import { ConvertPxToVW } from "./styles/global";
 
 const Box = styled.main`
-  height: 60vh;
-  width: 90%;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  margin: 5%;
+  margin: 3%;
 `;
 
-const Titlebody = styled.h1`
+const Titlebody = styled.h2`
   padding-top: 2%;
   font-family: Helvetica;
 `;

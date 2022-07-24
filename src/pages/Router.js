@@ -6,23 +6,21 @@ import Home from "./Home";
 import Saude from "./Saude";
 import Educacao from "./Educacao";
 import Agua from "./Agua";
-
 import styled from "styled-components";
-
+import { ConvertPxToVW } from "./styles/global";
 const BackgroundStyle = styled.div`
   width: 100%;
 `;
 
 const Menu = styled.div`
   vertical-align: middle;
-  height: 6vh;
-  width: 500vh;
+  height: ${ConvertPxToVW(50)};
+  width: ${ConvertPxToVW(1700)};
   display: table-cell;
 `;
 
 export const NavbarLink = styled(Link)`
-  margin-right: 8px;
-  height: 100%;
+  margin-right: ${ConvertPxToVW(8)};
   justify-content: flex-end;
   justify-content: center;
   align-items: center;
