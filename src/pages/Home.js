@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import avatar from "../assets/avatar.png";
@@ -41,43 +41,59 @@ export const NameHome = styled.a`
   }
 `;
 
-// const Animar = keyframes`
-// 0%{
-//   transform: translateX(300px);
-//   background-color: linear-gradient(45deg, blue, red);
-//   top: 40%;
-// }
+const blinkTextCursor = keyframes`
+  from {border-right-color: rgba(0, 0, 0, .75);}
+  to {border-right-color: transparent}
+`;
 
-// 100%{
-//   transform: translateY(-10px);
-//   background-color: aquamarine;
-//   right: 15%;
-// }
-// `;
+const TextCursor = styled.span`
+  border-right: 2px solid rgba(0, 0, 0, 0.75);
+  display: inline;
 
-// const Circle = styled.div`
-//   width: 25vw;
-//   height: 25vw;
-//   border-radius: 50%;
-//   border: solid;
-//   animation: ${Animar} 4s ease-out 2s infinite;
-//   position: absolute;
-// `;
+  /* A mágica acontece aqui */
+  animation: ${blinkTextCursor} 0.7s steps(44) infinite normal;
+`;
+
+const Container = styled.p`
+  display: inline-block;
+  margin: 0;
+`;
+
+function TypeWriter({ value }) {
+  const [text, setText] = useState("");
+
+  const typeWriter = (text, i = 0) => {
+    if (i < value.length) {
+      setText(text.slice(0, i + 1));
+      setTimeout(() => {
+        typeWriter(text, i + 1);
+      }, 100);
+    }
+  };
+
+  useEffect(() => {
+    typeWriter(value);
+  }, []);
+
+  return (
+    <Container>
+      {text}
+      <TextCursor />
+    </Container>
+  );
+}
 
 export default function Home() {
   return (
     <>
       <BackgroundStyle>
         <Textbody>
-          ---------
+          <TypeWriter value="---------" />
           <br />
-          Hello, I am Web Developer.
+          <TypeWriter value="Hello, I am Web Developer." />
           <br />
           Welcome to my portifolio.
         </Textbody>
-        {/* <Circle>
-          <h1>Oi galera</h1>
-        </Circle> */}
         <div
           style={{
             display: "flex",
