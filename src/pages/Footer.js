@@ -1,5 +1,5 @@
 import React from "react";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { BiMailSend } from "react-icons/bi";
 import styled from "styled-components";
@@ -47,18 +47,30 @@ export default function Footer() {
             <b>Copyright@2022</b>
           </Copyright>
           <IconsNetwork>
-            <a href="https://github.com/marielesf" target="_blank">
+            <a
+              href="https://github.com/marielesf"
+              target="_blank"
+              rel="noreferrer"
+            >
               <BsGithub size={18} />
             </a>
           </IconsNetwork>
           <IconsNetwork>
-            <a href="mailto:someone@example.com" target="_blank">
+            <a
+              href="mailto:someone@example.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <BiMailSend size={18} />
             </a>
           </IconsNetwork>
 
           <IconsNetwork>
-            <a href="https://www.linkedin.com/" target="_blank">
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <AiOutlineLinkedin size={18} />
             </a>
           </IconsNetwork>

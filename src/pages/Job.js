@@ -79,7 +79,11 @@ export default function Jobs() {
             <Card key={index}>
               <h3>{filteredRepo.name}</h3>
               <BoxImage>
-                <img src={Data[index].img} width="370px"></img>
+                <img
+                  src={Data[index].img}
+                  width="370px"
+                  alt="imagem de trabahos anteriores"
+                ></img>
               </BoxImage>
               <a href={filteredRepo.html_url} target="_blank" rel="noreferrer">
                 Saiba Mais
