@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { MdOutlineFoodBank, MdOutlineCastForEducation } from "react-icons/md";
+import { MdOutlineFoodBank } from "react-icons/md";
 
 const Container = styled.div`
   width: 100%;

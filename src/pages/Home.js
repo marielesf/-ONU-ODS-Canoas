@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-import avatar from "../assets/avatar.png";
 import avatar2 from "../assets/MyAvatar.png";
 import space from "../assets/space.jpg";
 import Footer from "./Footer";

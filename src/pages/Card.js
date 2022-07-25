@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { ConvertPxToVW } from "./styles/global";
 
 const Container = styled.div`
   width: 350px;

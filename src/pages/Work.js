@@ -12,7 +12,6 @@ import { MdOutlineFoodBank, MdOutlineCastForEducation } from "react-icons/md";
 import { TiWeatherShower } from "react-icons/ti";
 import { FaIndustry } from "react-icons/fa";
 import Fome from "./Fome";
-import { ConvertPxToVW } from "./styles/global";
 
 const Box = styled.main`
   height: auto;
