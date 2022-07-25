@@ -71,7 +71,7 @@ function TypeWriter({ value }) {
 
   useEffect(() => {
     typeWriter(value);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Container>
